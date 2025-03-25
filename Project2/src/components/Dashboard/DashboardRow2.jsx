@@ -128,7 +128,7 @@ function DashboardRow2() {
 
   return (
     <div className="row">
-      <div className="col-sm-12 col-md-3 col-xxl-3">
+      {/* <div className="col-sm-12 col-md-3 col-xxl-3">
       
        <div className="d-flex flex-column justify-content-between" >
        <div className="card custom-card wrapper" style={{height: "162px"}}>
@@ -176,12 +176,12 @@ function DashboardRow2() {
                         2
                       )}
                   </h4>
-                  {/* <div className="text-fixed-white fs-13">
+                  <div className="text-fixed-white fs-13">
                     <span className="op-7"> Increased By </span>
                     <span className="badge bg-primary1 align-middle op-9">
                       7.66%<i className="ti ti-arrow-narrow-up"></i>
                     </span>
-                  </div> */}
+                  </div>
                 </div>
                 <div className="avatar avatar-lg bg-white-transparent svg-white shadow-sm ">
                   <svg
@@ -1075,8 +1075,8 @@ function DashboardRow2() {
           </div>
         </div>
        </div>
-      </div>
-      <div className="col-sm-12  col-md-6 col-xxl-6">
+      </div> */}
+      <div className="col-sm-12  col-md-12 col-xxl-12">
         {/* <div className="card custom-card">
           <div className="card-header justify-content-between position-absolute">
             <div className="card-title">Daily Income</div>
@@ -1088,33 +1088,33 @@ function DashboardRow2() {
           </div>
         </div> */}
         <div
-          className="card custom-card overflow-hidden"
-          style={{ height: "95%" }}
+          className="card custom-card overflow-hidden glow-box"
+          style={{ height: "95%" , flexDirection: "row" , flexWrap: "wrap"}}
         >
-          <div className="card-header justify-content-left">
+          {/* <div className="card-header justify-content-left">
             <p className="mb-0 card-title">Upgrade Package</p>
-          </div>
+          </div> */}
           <div className="card-body p-0">
-            <div className="p-4 m-2 rounded-2 bg-primary text-fixed-white bg-crypto-balance">
+            <div className="p-4 m-2 rounded-2  text-fixed-white bg-crypto-balance glow-box" style={{height: "91%"}}>
               <div className="d-flex align-items-center gap-2 justify-content-between">
                 <div>
-                  <div className="mb-1 op-9">Total Wallet Balance</div>
-                  <h4 className="text-fixed-white mb-1 fw-medium me-2">
-                    ${walletBal ? Number(walletBal)?.toFixed(2) : "0.00"} USDT
-                  </h4>
+                  <div className="mb-1 op-9">Refer & Earn $1,000,000</div>
+                  <h6 className="text-fixed-white mb-1 fw-medium me-2">
+                    Unlock unlimited earning potential by referring your friends. <br /> The more you refer, the more you earn! <br /> Share your unique referral link and start building your financial future today.
+                  </h6>
                   {/* <span className="op-7 fs-12">Increased by </span>
                   <span className="badge bg-success mt-2 text-fixed-white p-1 text-end ms-1">
                     <i className="ti ti-trending-up me-2"></i>12.2%
                   </span> */}
                 </div>
-                <div className=" text-end">
+                {/* <div className=" text-end">
                   <div className="avatar avatar-lg bg-primary1 shadow">
                     <i className="ri-bank-line fs-4 lh-1"></i>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
-            <div className="row g-0">
+            {/* <div className="row g-0">
               <div className="col ">
                 <div className="p-3">
                   <div className="d-flex align-items-center justify-content-start gap-3">
@@ -1143,23 +1143,25 @@ function DashboardRow2() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
-          <div className="card-body p-3 pt-0 d-flex flex-column justify-content-center align-items-center">
+          <div className="card-body p-3 pt-0 d-flex flex-column justify-content-center align-items-center  mt-2">
+            <h5>Your Referral Link</h5>
             <div className="row gy-3 w-100 px-0">
               <div className="col-xl-12 p-0">
-                <div className="position-relative">
+                <div className="position-relative d-flex justify-content-center align-item-center">
                   <input
                     type="number"
-                    className="form-control"
+                    className="form-control w-75"
                     id="signup-package"
-                    placeholder="Enter Package Amount"
+                    placeholder="Referral Link"
                     value={packageValue}
                     onChange={handleInputChange}
+                    readOnly
                   />
                 </div>
               </div>
-              <div className="col-xl-12 p-0">
+              {/* <div className="col-xl-12 p-0">
                 <div className="d-flex justify-content-center gap-4 stake-amt-buttons align-items-center">
                   {["10", "50", "100", "200", "500"].map((value) => (
                     <button
@@ -1173,7 +1175,7 @@ function DashboardRow2() {
                     </button>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="cc mt-3 d-grid btn btn-outline-primary address-notconnected-btn d-flex justify-content-center align-items-center">
               {isLoading ? (
@@ -1188,11 +1190,11 @@ function DashboardRow2() {
                     background: "transparent",
                     border: "none",
                   }}
-                  className="btn btn-primary w-100 text-light stakebtn"
-                  onClick={() => Stake(packageValue)}
+                  className="btn btn-secondary-gradient w-100 text-light stakebtn"
+                  // onClick={() => Stake(packageValue)}
                   disabled={accessAddress}
                 >
-                  Upgrade
+                  Copy Link
                 </button>
               ) : (
                 <ConnectWallet className="address-connected-btn" />
@@ -1201,7 +1203,7 @@ function DashboardRow2() {
           </div>
         </div>
       </div>
-      <div className="col-sm-12  col-md-3 col-xxl-3">
+      {/* <div className="col-sm-12  col-md-3 col-xxl-3">
         <div className="card custom-card" style={{ height: "95%" }}>
           <div className="card-header justify-content-between">
             <div className="card-title">Direct and Team Data</div>
@@ -1216,7 +1218,7 @@ function DashboardRow2() {
                     </span>
                     <div className="d-flex ms-2 align-items-center">
                       <span className="fw-medium mb-0">Total Direct Users</span>
-                      {/* <p className="fs-12  mb-0">10% Increases</p> */}
+                      <p className="fs-12  mb-0">10% Increases</p>
                     </div>
                   </div>
                   <h6 className="fw-medium mb-0">
@@ -1275,7 +1277,7 @@ function DashboardRow2() {
                     </span>
                     <div className="d-flex ms-2 align-items-center">
                       <span className="fw-medium mb-0">Total Team Users</span>
-                      {/* <p className="fs-12 mb-0">11% Decrease</p> */}
+                      <p className="fs-12 mb-0">11% Decrease</p>
                     </div>
                   </div>
                   <h6 className="fw-medium mb-0">
@@ -1327,7 +1329,7 @@ function DashboardRow2() {
             </ul>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

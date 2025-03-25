@@ -34,11 +34,12 @@ export default function Header() {
                   <nav className="menu-nav">
                     <div className="logo">
                       <a href="index.html">
-                        <img
+                        {/* <img
                           src={Logo}
                           style={{ height: "37px" }}
                           alt="Logo"
-                        />
+                        /> */}
+                        <h2>CoopGenix</h2>
                       </a>
                     </div>
                     <div>

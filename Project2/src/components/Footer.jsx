@@ -4,19 +4,21 @@ function Footer() {
   return (
     <div>
       <footer className="footer mt-auto py-3 text-center" 
-          style={{ background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
-                 radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)` }}
+          style={{ background: "black" , padding: "0" , borderTop: "1px solid purple"}}
 
       >
         <div className="container">
-          <span className="text-light">
-          © 2025<span id="year"></span>
-            <a href="#" className="text-warning fw-medium">
-            ⚡ DecentraNext.
-            </a>
-            {" "}All rights reserved.
-          </span>
+                <div class="footer-content">
+        <h1>Join the Future of Finance</h1>
+        <p>Secure, Transparent, and Rewarding – Be a part of something revolutionary!</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+        </div>
+        <p>&copy; 2025 <strong style={{color: "rgba(255, 0, 255, 0.8)"}}>CoopUnion</strong>. All Rights Reserved.</p>
+    </div>
         </div>
       </footer>
     </div>

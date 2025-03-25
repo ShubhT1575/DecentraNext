@@ -35,10 +35,11 @@ const Layout = ({ children }) => {
   const hideHeaderFooterSidebar = [
     "/",
     "/learnmore",
-    "/signup",
+    "/SignUp",
     "/SignIn",
     "/signin",
     "/Terms",
+    "SignUp",
   ].includes(location.pathname);
 
   return (

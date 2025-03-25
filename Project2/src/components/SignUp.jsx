@@ -119,12 +119,12 @@ function SignUp() {
       //   return toast.error("Please connect wallet");
       // }
 
-      if (!isChecked) {
-        setIsLoading(false);
-        return toast.error(
-          "You must accept the Terms and Conditions to Register."
-        );
-      }
+      // if (!isChecked) {
+      //   setIsLoading(false);
+      //   return toast.error(
+      //     "You must accept the Terms and Conditions to Register."
+      //   );
+      // }
       if (!refAddress) {
         setIsLoading(false);
         return toast.error("Enter Referal Address Value");
@@ -150,7 +150,7 @@ function SignUp() {
         getRefAddress = await UserExist(refAddress);
         if (!getRefAddress) {
           setIsLoading(false);
-          toast.error("getRefAddress?.data?.message");
+          toast.error("Invalid Referral Address");
           return;
         }
       }
@@ -180,10 +180,10 @@ function SignUp() {
 
       console.log("a a");
       const allowance = await checkAllowance(address, Taddress);
-      console.log("a a4ll",allowance);
+      console.log("a a4ll", allowance);
       let appRes;
       // console.log(tokenDecimals, amt, "::::tokenS");
-      if (amt > (allowance / Number("1e" + tokenDecimals))) {
+      if (amt > allowance / Number("1e" + tokenDecimals)) {
         appRes = await appToken(convertToVin(amt), Taddress, tokenDecimals);
       } else {
         appRes = true;
@@ -233,239 +233,74 @@ function SignUp() {
 
   return (
     <>
-      <div>
-        <div className="row authentication authentication-cover-main mx-0">
-          {/* Left Section */}
-          <div className="col-xxl-6 col-xl-7">
-            <div className="row justify-content-center align-items-center h-100">
-              <div className="col-xxl-7 col-xl-9 col-lg-6 col-md-6 col-sm-8 col-12">
-                <div className="card custom-card my-5">
-                  <div className="card-body p-5 signup-body">
-                    <div className="text-center mb-3">
-                      <img src={LOGO} alt="" width={150} />
-                    </div>
-                    <p className="h5 mb-2 text-center">Register Here</p>
-                    <p className="mb-4 op-7 fw-normal text-center">
-                      Welcome! Dashboard by creating your account.
-                    </p>
-                    <div className="row gy-3">
-                      <div className="col-xl-12">
-                        <label
-                          htmlFor="signup-firstname"
-                          className="form-label text-default"
-                        >
-                          Wallet Address
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control text-light"
-                          id="signup-firstname"
-                          placeholder={
-                            isConnected ? address : "Connect Your Wallet First"
-                          }
-                          readOnly
-                        />
-                      </div>
-
-                      <div className="col-xl-12 " id="sponsor-div">
-                        <label
-                          htmlFor="signup-sponsor-id"
-                          className="form-label text-default text-light"
-                        >
-                          Referal Id ?
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="signup-sponsor-id"
-                          placeholder="Enter sponsor id"
-                          value={refFromUrl ? refFromUrl : inputRef}
-                          onChange={(e) => {
-                            setInputRef(e.target.value);
+      <div className="full-width">
+        <div className="hero-sign">
+          {/* <!-- Sign In Section --> */}
+          <div className="auth-section">
+            <h1 className="brand-name">CoopUnion</h1>
+            <h2 className="h2">Sign Up</h2>
+            <p className="welcome-msg text-light">
+            Join CoopUnion today! Experience the future of financial freedom.
+            </p>
+            <input
+              className="input-signin"
+              value={address}
+              type="email"
+              placeholder="Email"
+              readOnly
+            />
+            <input
+              className="input-signin"
+              value={refFromUrl ? refFromUrl : inputRef}
+              onChange={(e) => setInputRef(e.target.value)}
+              type="text"
+              placeholder="Sponsor Id"
+            />
+            <input
+              className="input-signin"
+              value={packageValue}
+              onChange={handleInputChange}
+              type="text"
+              placeholder="Package Value"
+            />
+            {/* <input className="input-signin" type="password" placeholder="Password"/> */}
+            {isConnected ? (
+              <button
+                className="button-signin"
+                onClick={()=>Register(
+                  refFromUrl ? refFromUrl : inputRef,
+                  packageValue
+                )}
+              >
+                Register
+              </button>
+            ) : (
+              <button className="button-signin btn btn-danger" disabled>
+                Wallet Not Connected !!
+              </button>
+            )}
+            <p className="text-light"></p>
+            <div className="web3-buttons">
+              <ConnectWallet />
+              <div className="d-flex justify-content-center">
+                      <p className=" mt-3 mb-0 d-flex align-items-center justify-content-center gap-2 text-light">
+                        Already have an account?{"  "}
+                        <div
+                          className="text-success badge bg-white-transparent rounded-pill d-flex align-items-center fs-11 me-0 ms-2 mb-0 "
+                          style={{
+                            width: "fit-content",
+                            height: "fit-content",
+                            cursor: "pointer",
                           }}
-                        />
-                      </div>
-                      <div className="col-xl-12">
-                        <label
-                          htmlFor="signup-package"
-                          className="form-label text-default"
                         >
-                          Package<sup className="fs-12 text-light">*</sup>
-                        </label>
-                        <div className="position-relative">
-                          <input
-                            type="number"
-                            className="form-control"
-                            id="signup-package"
-                            placeholder="Enter Your Package"
-                            value={packageValue}
-                            onChange={handleInputChange}
-                          />
-                        </div>
-                        <p className="mt-2 mb-0 text-light">1 VIN = $ 0.1</p>
-                        <p className="text-light mb-0">
-                          Equivalent VIN: {convertToVin(packageValue)}
-                        </p>
-                      </div>
-                      <div className="col-xl-12">
-                        {/* <div className="d-flex justify-content-center gap-3 default-package">
-                          {["10", "50", "100", "200", "500"].map((value) => (
-                            <button
-                              key={value}
-                              type="button"
-                              className={`btn btn-${getButtonClass(
-                                value
-                              )} btn-wave`}
-                              value={value}
-                              onClick={() => handleButtonClick(value)}
-                            >
-                              $ {value}
-                            </button>
-                          ))}
-                        </div> */}
-                      </div>
-                    </div>
-                    {/* <div className="text-center">
-                      <p className=" mt-3 mb-0 ">Have any Sponsor Id ?{"  "}</p>
-                      <div>
-                        <div
-                          className="form-check form-check-inline"
-                          style={{ paddingRight: "0px" }}
-                        >
-                          <input
-                            className="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox1"
-                            value="option1"
-                            onChange={handleYesChange}
-                            checked={isCheckedYes}
-                            style={{ cursor: "pointer" }}
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="inlineCheckbox1"
-                          >
-                            Yes
-                          </label>
-                        </div>
-                        <div className="form-check form-check-inline">
-                          <input
-                            className="form-check-input"
-                            type="checkbox"
-                            id="inlineCheckbox2"
-                            value="option2"
-                            onChange={handleNoChange}
-                            checked={isCheckedNo}
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="inlineCheckbox2"
-                          >
-                            No
-                          </label>
-                        </div>
-                      </div>
-                    </div> */}
-                    <div className="col-lg-12">
-                      <div className="d-flex align-items-center gap-3">
-                        <input
-                          className="form-check-input"
-                          type="checkbox"
-                          value=""
-                          id="defaultCheck1"
-                          checked={isChecked}
-                          onChange={handleCheckboxChange}
-                        />
-                        <div
-                          className="form-check mt-2"
-                          style={{ paddingRight: "0px" }}
-                        >
-                          <label
-                            className="form-check-label text-muted fw-normal fs-14"
-                            for="defaultCheck1"
-                          ></label>
-                          By signing up, you agree to our
-                          <Link to="/Terms" className="text-success">
-                            <u>Terms &amp; Conditions</u>
+                          <Link to="/SignIn" className="text-primary" style={{fontSize: "15px"}}>
+                            Sign In
                           </Link>
                         </div>
-                      </div>
-                    </div>
-                    <div className="cc mt-4 d-grid btn btn-outline-primary address-notconnected-btn d-flex justify-content-center align-content-center text-primary">
-                      {isLoading ? (
-                        <span
-                          className="spinner-border text-light"
-                          role="status"
-                        >
-                          <span className="sr-only"></span>
-                        </span>
-                      ) : isConnected ? (
-                        <button
-                          style={{
-                            background: "transparent",
-                            border: "none",
-                          }}
-                          className="btn w-100 text-light"
-                          onClick={() =>
-                            Register(
-                              refFromUrl ? refFromUrl : inputRef,
-                              packageValue
-                            )
-                          }
-                        >
-                          Register
-                        </button>
-                      ) : (
-                        !isConnected && (
-                          <ConnectWallet className="address-connected-btn" />
-                        )
-                      )}
-                    </div>
-
-                    <div className="text-center">
-                      <p className=" mt-3 mb-0">
-                        Already have an account?{"  "}
-                        <Link to="/SignIn" className="text-primary">
-                          Sign In
-                        </Link>
                       </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Section */}
-          <div className="col-xxl-6 col-xl-5 col-lg-12 d-xl-block d-none px-0">
-            <div className="authentication-cover overflow-hidden">
-              <div className="authentication-cover-logo">
-                <ConnectWallet />
-              </div>
-              <div className="aunthentication-cover-content d-flex align-items-center justify-content-center">
-                <div className="">
-                  <div className="d-flex gap-2">
-                    <h3 className="text-fixed-white mb-1 fw-medium">
-                      Welcome{" "}
-                    </h3>
-                    <h3 className="text-primary2">
-                      {address
-                        ? `${address.slice(0, 4)}...${address.slice(-4)}`
-                        : ""}
-                      !
-                    </h3>
-                  </div>
-                  <h6 className="text-fixed-white mb-3 fw-medium">
-                    Register Your Account
-                  </h6>
-                  <p className="text-fixed-white mb-1 op-6">
-                    Welcome to the VIN TEC Dashboard. Please Register to
-                    securely manage your administrative tools and oversee
-                    platform activities. Your credentials ensure system
-                    integrity and functionality.
-                  </p>
-                </div>
-              </div>
+              {/* <button className="button-signin" onclick="connectMetaMask()"><i className="fab fa-ethereum"></i> MetaMask</button>
+            <button className="button-signin" onclick="connectWalletConnect()"><i className="fas fa-link"></i> WalletConnect</button> */}
             </div>
           </div>
         </div>

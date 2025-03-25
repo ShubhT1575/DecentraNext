@@ -46,9 +46,7 @@ function MainComponent() {
   return (
     <div
       className="main-content app-content"
-      style={{ background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
-                 radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)` }}
+      style={{ background: "black" , margin: "0"}}
     >
       <div
         className="container-fluid"
@@ -156,8 +154,8 @@ function MainComponent() {
         </div> */}
         {/* row  start */}
         <DashboardRow1 />
-        {/* <DashboardRow2 />
-        <DashboardRow3 />
+        <DashboardRow2 />
+        {/* <DashboardRow3 />
         <DashboardRow4 /> */}
         {/* row  end */}
       </div>

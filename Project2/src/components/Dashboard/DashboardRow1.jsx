@@ -63,263 +63,251 @@ function DashboardRow1() {
   return (
     <>
       <div className="row">
-      <div className="col-sm-6 col-lg-6">
-            <div className="">
-              <div className="card custom-card school-card">
-                <div className="card-body d-flex gap-2 justify-content-between">
-                  <div>
-                    <div className="d-flex gap-2">
-                      <span className="d-block mb-1">User ID</span>
-                      {/* <div
-                        className="text-success badge bg-success-transparent rounded-pill d-flex align-items-center fs-11 me-0 ms-2 mb-0 "
-                        style={{
-                          width: "fit-content",
-                          height: "fit-content",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Monthly Activated
-                      </div> */}
-                    </div>
-                    <h6 className="mb-0 fw-semibold">#123456</h6>
-                  </div>
-                  <div>
-                    <span className="text-primary">
-                      {/* <img src={id} alt="" style={{ width: "40px" }} /> */}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-6">
-            <div>
-              <div className="card custom-card school-card">
-                <div className="card-body d-flex gap-2 justify-content-between">
-                  <div>
-                    <span className="d-block mb-1">Direct Referral</span>
-                    <h6 className="mb-0 fw-semibold">
-                      {"#123456"}
-                    </h6>
-                  </div>
-                  <div>
-                    <span className="text-primary1">
-                      {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-6">
-            <div>
-              <div className="card custom-card school-card">
-                <div className="card-body d-flex gap-2 justify-content-between">
-                  <div>
-                    <span className="d-block mb-1">Total Earnings</span>
-                    <h6 className="mb-0 fw-semibold">
-                      {"$5000"}
-                    </h6>
-                  </div>
-                  <div>
-                    <span className="text-primary1">
-                      {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-6">
-            <div>
-              <div className="card custom-card school-card">
-                <div className="card-body d-flex gap-2 justify-content-between">
-                  <div>
-                    <span className="d-block mb-1">Referral Reward</span>
-                    <h6 className="mb-0 fw-semibold">
-                      {"$5000"}
-                    </h6>
-                  </div>
-                  <div>
-                    <span className="text-primary1">
-                      {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        <div className="col-sm-12 col-md-6 col-lg-6 ">
+        {/* 
+      <div class="user-strip">
+    <div>User ID: #123456</div>
+  <div>Sponsor ID: #123456</div>
+  <div>ID Date: #123456</div>
+    <div>Total Earnings: $5000</div>
+    <div>Earning Goal: $10000</div>
+    <div>Spot Wallet: $1200</div>
+  <button class="withdraw-btn">Claim</button>
+    <div>Reward Wallet: $800</div>
+    <button class="withdraw-btn">Withdraw</button>
+</div> */}
 
-        <div
-          className="row col-md-12 col-lg-12 left-row-cards"
-          style={{ paddingRight: "0px" , marginLeft: "0", marginRight: "0"}}
-        >
-          <div className="col-sm-6 col-lg-6">
-            <div className="">
-              <div className="card custom-card school-card">
-                <div className="card-body d-flex gap-2 justify-content-between">
-                  <div>
-                    <div className="d-flex gap-2">
-                      <span className="d-block mb-1">User ID</span>
-                      {/* <div
-                        className="text-success badge bg-success-transparent rounded-pill d-flex align-items-center fs-11 me-0 ms-2 mb-0 "
-                        style={{
-                          width: "fit-content",
-                          height: "fit-content",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Monthly Activated
-                      </div> */}
+        <div className="col-sm-12 col-lg-12">
+          <div>
+            <div className="card custom-card school-card glow-box">
+              <div className="card-body d-flex gap-2 justify-content-between flex-wrap">
+                <div className="">
+                  <div className="card custom-card school-card glow-box width-box">
+                    <div className="card-body d-flex gap-2 justify-content-between">
+                      <div>
+                        <span className="d-block mb-1">User ID</span>
+                        <h6 className="mb-0 fw-semibold">{"$5000"}</h6>
+                      </div>
+                      <div>
+                        <span className="text-primary1">
+                          {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
+                        </span>
+                      </div>
                     </div>
-                    <h6 className="mb-0 fw-semibold">#123456</h6>
-                  </div>
-                  <div>
-                    <span className="text-primary">
-                      {/* <img src={id} alt="" style={{ width: "40px" }} /> */}
-                    </span>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-6">
-            <div>
-              <div className="card custom-card school-card">
-                <div className="card-body d-flex gap-2 justify-content-between">
-                  <div>
-                    <span className="d-block mb-1">Direct Referral</span>
-                    <h6 className="mb-0 fw-semibold">
-                      {"#123456"}
-                    </h6>
-                  </div>
-                  <div>
-                    <span className="text-primary1">
-                      {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
-                    </span>
+                <div>
+                  <div className="card custom-card school-card glow-box width-box">
+                    <div className="card-body d-flex gap-2 justify-content-between">
+                      <div>
+                        <span className="d-block mb-1">Sponsor ID</span>
+                        <h6 className="mb-0 fw-semibold">{"$5000"}</h6>
+                      </div>
+                      <div>
+                        <span className="text-primary1">
+                          {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-6">
-            <div>
-              <div className="card custom-card school-card">
-                <div className="card-body d-flex gap-2 justify-content-between">
-                  <div>
-                    <span className="d-block mb-1">Total Earnings</span>
-                    <h6 className="mb-0 fw-semibold">
-                      {"$5000"}
-                    </h6>
-                  </div>
-                  <div>
-                    <span className="text-primary1">
-                      {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
-                    </span>
+                <div>
+                  <div className="card custom-card school-card glow-box width-box">
+                    <div className="card-body d-flex gap-2 justify-content-between">
+                      <div>
+                        <span className="d-block mb-1">ID Date</span>
+                        <h6 className="mb-0 fw-semibold">{"$5000"}</h6>
+                      </div>
+                      <div>
+                        <span className="text-primary1">
+                          {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-6">
-            <div>
-              <div className="card custom-card school-card">
-                <div className="card-body d-flex gap-2 justify-content-between">
-                  <div>
-                    <span className="d-block mb-1">Referral Reward</span>
-                    <h6 className="mb-0 fw-semibold">
-                      {"$5000"}
-                    </h6>
-                  </div>
-                  <div>
-                    <span className="text-primary1">
-                      {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
-                    </span>
+                <div>
+                  <div className="card custom-card school-card glow-box width-box">
+                    <div className="card-body d-flex gap-2 justify-content-between">
+                      <div>
+                        <span className="d-block mb-1">Total Earnings</span>
+                        <h6 className="mb-0 fw-semibold">{"$5000"}</h6>
+                      </div>
+                      <div>
+                        <span className="text-primary1">
+                          {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-6">
-            <div>
-              <div className="card custom-card school-card">
-                <div className="card-body d-flex gap-2 justify-content-between">
-                  <div>
-                    <span className="d-block mb-1">Earning Goal</span>
-                    <h6 className="mb-0 fw-semibold">
-                      {"$10000"}
-                    </h6>
-                  </div>
-                  <div>
-                    <span className="text-primary1">
-                      {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
-                    </span>
+                <div>
+                  <div className="card custom-card school-card glow-box width-box">
+                    <div className="card-body d-flex gap-2 justify-content-between">
+                      <div>
+                        <span className="d-block mb-1">Earning Goal</span>
+                        <h6 className="mb-0 fw-semibold">{"$5000"}</h6>
+                      </div>
+                      <div>
+                        <span className="text-primary1">
+                          {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-6">
-            <div>
-              <div className="card custom-card school-card">
-                <div className="card-body d-flex gap-2 justify-content-between">
-                  <div>
-                    <span className="d-block mb-1">Reward Goal</span>
-                    <h6 className="mb-0 fw-semibold">
-                      {"$10000"}
-                    </h6>
-                  </div>
-                  <div>
-                    <span className="text-primary1">
-                      {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-6">
-            <div>
-              <div className="card custom-card school-card">
-                <div className="card-body d-flex gap-2 justify-content-between">
-                  <div>
-                    <span className="d-block mb-1">Wallet Balance</span>
-                    <h6 className="mb-0 fw-semibold">
-                      {"$1200"}
-                    </h6>
-                  </div>
-                  <div>
-                    <span className="text-primary1">
-                      {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
-                    </span>
+                <div>
+                  <div className="card custom-card school-card glow-box width-box">
+                    <div className="card-body d-flex gap-2 justify-content-between">
+                      <div>
+                        <span className="d-block mb-1">Promise Reward</span>
+                        <h6 className="mb-0 fw-semibold">{"$5000"}</h6>
+                      </div>
+                      <div>
+                        <span className="text-primary1">
+                          {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
+                        </span>
+                        {/* <span
+                        className="text-info badge bg-success-transparent"
+                        style={{ cursor: "pointer", position: "absolute" , bottom: "15px" , right: "15px" }}
+                        // onClick={getDailyReward}
+                      >
+                        Claim
+                      </span> */}
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-6">
-            <div>
-              <div className="card custom-card school-card">
-                <div className="card-body d-flex gap-2 justify-content-between">
-                  <div>
-                    <span className="d-block mb-1">Direct Volume</span>
-                    <h6 className="mb-0 fw-semibold">
-                      {"$1200"}
-                    </h6>
+                <div>
+                  <div className="card custom-card school-card glow-box width-box">
+                    <div className="card-body d-flex gap-2 justify-content-between">
+                      <div>
+                        <span className="d-block mb-1">Spot Wallet</span>
+                        <h6 className="mb-0 fw-semibold">{"$5000"}</h6>
+                      </div>
+                      <div>
+                        <span className="text-primary1">
+                          {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
+                        </span>
+                        <span
+                        className="text-info badge bg-success-transparent"
+                        style={{ cursor: "pointer", position: "absolute" , bottom: "15px" , right: "15px" }}
+                        // onClick={getDailyReward}
+                      >
+                        Claim
+                      </span>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <span className="text-primary1">
-                      {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
-                    </span>
+                </div>
+                <div>
+                  <div className="card custom-card school-card glow-box width-box">
+                    <div className="card-body d-flex gap-2 justify-content-between">
+                      <div>
+                        <span className="d-block mb-1">Reward Wallet</span>
+                        <h6 className="mb-0 fw-semibold">{"$5000"}</h6>
+                      </div>
+                      <div>
+                        <span className="text-primary1">
+                          {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
+                        </span>
+                        <span
+                        className="text-info badge bg-success-transparent"
+                        style={{ cursor: "pointer", position: "absolute" , bottom: "15px" , right: "8px" }}
+                        // onClick={getDailyReward}
+                      >
+                        Withdraw
+                      </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        {/* <div className="col-sm-6 col-lg-6">
+         
+        </div> */}
 
-          <div className="card custom-card crm-card">
+        <div className="col-sm-12 col-md-6 col-lg-6 ">
+          <div
+            className="row col-md-12 col-lg-12 left-row-cards"
+            style={{ paddingRight: "0px", marginLeft: "0", marginRight: "0" }}
+          >
+            <div className="col-sm-6 col-lg-6">
+              <div>
+                <div className="card custom-card school-card glow-box">
+                  <div className="card-body d-flex gap-2 justify-content-between">
+                    <div>
+                      <span className="d-block mb-1">Direct Referral</span>
+                      <h6 className="mb-0 fw-semibold">{"#123456"}</h6>
+                    </div>
+                    <div>
+                      <span className="text-primary1">
+                        {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-sm-6 col-lg-6">
+              <div>
+                <div className="card custom-card school-card glow-box">
+                  <div className="card-body d-flex gap-2 justify-content-between">
+                    <div>
+                      <span className="d-block mb-1">Referral Reward</span>
+                      <h6 className="mb-0 fw-semibold">{"$5000"}</h6>
+                    </div>
+                    <div>
+                      <span className="text-primary1">
+                        {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-sm-6 col-lg-6">
+              <div>
+                <div className="card custom-card school-card glow-box">
+                  <div className="card-body d-flex gap-2 justify-content-between">
+                    <div>
+                      <span className="d-block mb-1">Reward Goal</span>
+                      <h6 className="mb-0 fw-semibold">{"$10000"}</h6>
+                    </div>
+                    <div>
+                      <span className="text-primary1">
+                        {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-sm-6 col-lg-6">
+              <div>
+                <div className="card custom-card school-card glow-box">
+                  <div className="card-body d-flex gap-2 justify-content-between">
+                    <div>
+                      <span className="d-block mb-1">Direct Volume</span>
+                      <h6 className="mb-0 fw-semibold">{"$1200"}</h6>
+                    </div>
+                    <div>
+                      <span className="text-primary1">
+                        {/* <img src={sponsor} alt="" style={{ width: "40px" }} /> */}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card custom-card crm-card glow-box">
             <div className="card-body">
               {/* <div className="d-flex justify-content-between">
                 <div className="d-flex justify-content-between mb-2">
@@ -373,14 +361,19 @@ function DashboardRow1() {
                           <td>{item.amount2}</td>
                         </tr>
                       ))}
-                                              <tr>
-                          <td style={{fontWeight: "700"}}>{"Total"}</td>
-                          <td style={{ color: "rgb(255, 255, 255)",fontWeight: "700" }}>
-                            {"Per Cycle"}
-                          </td>
-                          <td style={{fontWeight: "700"}}>{"$68088080"}</td>
-                          <td style={{fontWeight: "700"}}>{"$680880"}</td>
-                        </tr>
+                      <tr>
+                        <td style={{ fontWeight: "700" }}>{"Total"}</td>
+                        <td
+                          style={{
+                            color: "rgb(255, 255, 255)",
+                            fontWeight: "700",
+                          }}
+                        >
+                          {"Per Cycle"}
+                        </td>
+                        <td style={{ fontWeight: "700" }}>{"$68088080"}</td>
+                        <td style={{ fontWeight: "700" }}>{"$680880"}</td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -390,7 +383,8 @@ function DashboardRow1() {
           </div>
         </div>
         <div className="col-sm-12 col-md-6 col-lg-6 ">
-          <div className="card custom-card crm-card">
+          <div className="card custom-card crm-card glow-box">
+          <h3 style={{textAlign: "center" , marginTop: "18px"}}>Block Reward</h3>
             <div
               className="card-body"
               style={{
@@ -444,9 +438,17 @@ function DashboardRow1() {
                       </div>
                       <div className="box-btn-content content-2">
                         <div class="activate-button">
-                          <button type="button" className="btn text-light" style={{background:`radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
+                          <button
+                            type="button"
+                            className="btn text-light"
+                            style={{
+                              background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
                  radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`}}>Activate</button>
+                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`,
+                            }}
+                          >
+                            Activate
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -482,9 +484,17 @@ function DashboardRow1() {
                       </div>
                       <div className="box-btn-content content-2">
                         <div class="activate-button">
-                          <button type="button" className="btn text-light" style={{background:`radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
+                          <button
+                            type="button"
+                            className="btn text-light"
+                            style={{
+                              background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
                  radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`}}>Activate</button>
+                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`,
+                            }}
+                          >
+                            Activate
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -520,9 +530,17 @@ function DashboardRow1() {
                       </div>
                       <div className="box-btn-content content-2">
                         <div class="activate-button">
-                          <button type="button" className="btn text-light" style={{background:`radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
+                          <button
+                            type="button"
+                            className="btn text-light"
+                            style={{
+                              background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
                  radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`}}>Activate</button>
+                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`,
+                            }}
+                          >
+                            Activate
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -558,9 +576,17 @@ function DashboardRow1() {
                       </div>
                       <div className="box-btn-content content-2">
                         <div class="activate-button">
-                          <button type="button" className="btn text-light" style={{background:`radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
+                          <button
+                            type="button"
+                            className="btn text-light"
+                            style={{
+                              background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
                  radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`}}>Activate</button>
+                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`,
+                            }}
+                          >
+                            Activate
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -596,9 +622,17 @@ function DashboardRow1() {
                       </div>
                       <div className="box-btn-content content-2">
                         <div class="activate-button">
-                          <button type="button" className="btn text-light" style={{background:`radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
+                          <button
+                            type="button"
+                            className="btn text-light"
+                            style={{
+                              background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
                  radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`}}>Activate</button>
+                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`,
+                            }}
+                          >
+                            Activate
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -634,9 +668,17 @@ function DashboardRow1() {
                       </div>
                       <div className="box-btn-content content-2">
                         <div class="activate-button">
-                          <button type="button" className="btn text-light" style={{background:`radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
+                          <button
+                            type="button"
+                            className="btn text-light"
+                            style={{
+                              background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
                  radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`}}>Activate</button>
+                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`,
+                            }}
+                          >
+                            Activate
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -672,9 +714,17 @@ function DashboardRow1() {
                       </div>
                       <div className="box-btn-content content-2">
                         <div class="activate-button">
-                          <button type="button" className="btn text-light" style={{background:`radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
+                          <button
+                            type="button"
+                            className="btn text-light"
+                            style={{
+                              background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
                  radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`}}>Activate</button>
+                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`,
+                            }}
+                          >
+                            Activate
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -710,9 +760,17 @@ function DashboardRow1() {
                       </div>
                       <div className="box-btn-content content-2">
                         <div class="activate-button">
-                          <button type="button" className="btn text-light" style={{background:`radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
+                          <button
+                            type="button"
+                            className="btn text-light"
+                            style={{
+                              background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
                  radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`}}>Activate</button>
+                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`,
+                            }}
+                          >
+                            Activate
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -748,9 +806,17 @@ function DashboardRow1() {
                       </div>
                       <div className="box-btn-content content-2">
                         <div class="activate-button">
-                          <button type="button" className="btn text-light" style={{background:`radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
+                          <button
+                            type="button"
+                            className="btn text-light"
+                            style={{
+                              background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
                  radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`}}>Activate</button>
+                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`,
+                            }}
+                          >
+                            Activate
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -786,9 +852,17 @@ function DashboardRow1() {
                       </div>
                       <div className="box-btn-content content-2">
                         <div class="activate-button">
-                          <button type="button" className="btn text-light" style={{background:`radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
+                          <button
+                            type="button"
+                            className="btn text-light"
+                            style={{
+                              background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
                  radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`}}>Activate</button>
+                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`,
+                            }}
+                          >
+                            Activate
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -824,9 +898,17 @@ function DashboardRow1() {
                       </div>
                       <div className="box-btn-content content-2">
                         <div class="activate-button">
-                          <button type="button" className="btn text-light" style={{background:`radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
+                          <button
+                            type="button"
+                            className="btn text-light"
+                            style={{
+                              background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
                  radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`}}>Activate</button>
+                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`,
+                            }}
+                          >
+                            Activate
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -862,9 +944,17 @@ function DashboardRow1() {
                       </div>
                       <div className="box-btn-content content-2">
                         <div class="activate-button">
-                          <button type="button" className="btn text-light" style={{background:`radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
+                          <button
+                            type="button"
+                            className="btn text-light"
+                            style={{
+                              background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
                  radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`}}>Activate</button>
+                 linear-gradient(135deg, #0d0d2b, #1b1b3a)`,
+                            }}
+                          >
+                            Activate
+                          </button>
                         </div>
                       </div>
                     </div>

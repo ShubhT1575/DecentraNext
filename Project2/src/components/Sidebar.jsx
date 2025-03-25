@@ -67,11 +67,12 @@ function Sidebar() {
   }
 
   return (
-    <div className={`app-sidebar sticky t`} id="sidebar"
-    style={{ background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
-                 radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)` }}
+    <div className={`app-sidebar sticky t close glow-box glow-box-blue `} id="sidebar"
+    style={{ background: "black" }}
      >
+      {/* `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
+                 radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
+                 linear-gradient(135deg, #0d0d2b, #1b1b3a)` */}
       <div className="main-sidebar-header">
         <a href="/dashboard" className="header-logo fs-4 fw-bold mt-3">
           {/* <img src={LOGO} alt="Logo" style={{ width: "175px", height: "37px" }} /> */}
@@ -85,12 +86,13 @@ function Sidebar() {
       >
         <nav className="main-menu-container nav nav-pills flex-column sub-open position-relative h-100 mt-3">
           <div className="d-flex justify-content-center mb-3">
-            <img
+            {/* <img
               src={LOGO}
               alt="Logo"
               style={{ height: "37px", width: "175px", display: "none" }}
               className="dash-logo"
-            />
+            /> */}
+            <h4>⚡ DecentraNext</h4>
           </div>
           <ul className="main-menu ">
             <li className="slide has-sub">

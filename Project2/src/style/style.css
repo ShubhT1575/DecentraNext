@@ -377,6 +377,21 @@ tr {
   cursor: not-allowed !important;
 }
 
+@media (min-width: 990px){
+  .close{
+    display: none !important;
+  }
+}
+
+/* .main-sidebar {
+  display: none;
+  transition: transform 0.3s ease !important;
+}
+.app-sidebar{
+  display: none;
+  transition: transform 0.3s ease !important;
+} */
+
 @media (max-width: 990px) {
   .main-sidebar {
     display: none;
@@ -465,3 +480,34 @@ tr {
 .Documents-btn:hover .fileFront {
   transform: rotateX(30deg);
 }
+
+.social-icons {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  /* color: white; */
+  width: 50px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 50px;
+  background: transparent;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  background: rgba(255, 255, 255, 0.822);
+}
+.footer-content h1 {
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.8),
+  0 0 20px rgba(255, 0, 255, 0.6),
+  0 0 30px rgba(255, 0, 255, 0.4);
+}
+.footer-content p{
+  color: white;
+  font-weight: 700;
+} 

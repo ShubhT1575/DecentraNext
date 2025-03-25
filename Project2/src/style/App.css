@@ -16095,7 +16095,7 @@ button {
 }
 @media (min-width: 992px) {
   [data-nav-layout="vertical"] .footer {
-    padding-inline-start: 15rem;
+    /* padding-inline-start: 15rem; */
   }
 }
 .footer {

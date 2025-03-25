@@ -9,16 +9,16 @@ import {
 } from "../Redux/Slice";
 import { getUser } from "../API/Api";
 import { getUSDT } from "./web3";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   const dispatch = useDispatch();
   const chainId = useChainId();
   // const {address} = useAccount();
-  const wallet = useSelector((state)=>state.coreCrowd.wallet)
+  const wallet = useSelector((state) => state.coreCrowd.wallet);
   const address = wallet?.walletAddress;
   const [accessAdress, setAccessAddress] = useState("");
-  const { connector, isConnected, status, isDisconnected } =
-    useAccount();
+  const { connector, isConnected, status, isDisconnected } = useAccount();
 
   useEffect(() => {
     const res = new URLSearchParams(window.location.search);
@@ -87,11 +87,11 @@ function Header() {
   }, [address]);
 
   return (
-    <header className="app-header sticky" id="header"
-    style={{ background: `radial-gradient(circle at 30% 30%, rgba(0, 191, 255, 0.8), rgba(0, 0, 0, 0) 50%), 
-                 radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.8), rgba(0, 0, 0, 0) 50%),
-                 linear-gradient(135deg, #0d0d2b, #1b1b3a)` }}
-     >
+    <header
+      className="app-header sticky glow-box glow-box-blue"
+      id="header"
+      style={{ background: "black" }}
+    >
       <div className="main-header-container container-fluid align-items-center">
         <div className="header-content-left ">
           <div
@@ -101,13 +101,60 @@ function Header() {
           >
             <a
               aria-label="Hide Sidebar"
-              className="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle"
+              className="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle ham"
               data-bs-toggle="sidebar"
               href="#"
             >
               <span></span>
             </a>
           </div>
+
+          <div className="items-nav">
+            <div className="header-logo">
+              <NavLink
+                to="#"
+                className=""
+                style={{color: "white"}}
+              >
+                ⚡ DecentraNext
+              </NavLink>
+            </div>
+            <div className="nav-menu">
+              <NavLink
+                to="/Dashboard"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                Dashboard
+              </NavLink>
+            </div>
+            <div className="nav-menu">
+              <NavLink
+                to="/WalkingRewards"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                Table
+              </NavLink>
+            </div>
+            <div className="nav-menu">
+              <NavLink
+                to="#"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                List
+              </NavLink>
+            </div>
+            {/* <div className="nav-menu"></div> */}
+          </div>
+
+          {/* <div className="header-nav">
+            <div className="wallet-button"></div>
+          </div> */}
           {/* <button className="Documents-btn" onClick={handleOpenPDF}>
             <span className="folderContainer">
               <svg
@@ -195,7 +242,7 @@ function Header() {
           </button> */}
         </div>
         <ul className="header-content-right">
-          {/* <ConnectWallet /> */}
+          <ConnectWallet />
         </ul>
       </div>
     </header>
